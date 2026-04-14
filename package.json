@@ -1,0 +1,14 @@
+{
+  "name": "locallift-web-co",
+  "version": "1.0.0",
+  "description": "LocalLift Web Co. — Revenue-focused web design agency (MERN Stack)",
+  "private": true,
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "admin": "cd admin && npm run dev",
+    "dev": "echo Run 'npm run client', 'npm run server', and 'npm run admin' in separate terminals",
+    "install:all": "cd client && npm install && cd ../server && npm install && cd ../admin && npm install",
+    "seed": "cd server && npm run seed"
+  }
+}
