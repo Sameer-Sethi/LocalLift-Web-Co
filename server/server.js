@@ -17,7 +17,10 @@ if (process.env.MONGODB_URI) {
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: [
+    process.env.CLIENT_URL || 'http://localhost:5173',
+    process.env.ADMIN_URL || 'http://localhost:5174'
+  ],
   credentials: true
 }))
 app.use(express.json({ limit: '10mb' }))

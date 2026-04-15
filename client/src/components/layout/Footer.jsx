@@ -1,5 +1,19 @@
 import { Link } from 'react-router-dom'
-import { Zap, Mail, Phone, MapPin, ArrowUpRight, Linkedin, Twitter, Globe2 } from 'lucide-react'
+import { Zap, Mail, Phone, MapPin, ArrowUpRight, Globe2 } from 'lucide-react'
+
+const LinkedinIcon = ({ size = 24, color = "currentColor" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const TwitterIcon = ({ size = 24, color = "currentColor" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+  </svg>
+);
 
 export default function Footer() {
   return (
@@ -62,8 +76,8 @@ export default function Footer() {
         <div className="footer__bottom">
           <p>&copy; {new Date().getFullYear()} LocalLift Web Co. All rights reserved.</p>
           <div className="footer__social">
-            <a href="#" aria-label="LinkedIn"><Linkedin size={18} /></a>
-            <a href="#" aria-label="Twitter"><Twitter size={18} /></a>
+            <a href="#" aria-label="LinkedIn"><LinkedinIcon size={18} /></a>
+            <a href="#" aria-label="Twitter"><TwitterIcon size={18} /></a>
             <a href="#" aria-label="Website"><Globe2 size={18} /></a>
           </div>
         </div>
